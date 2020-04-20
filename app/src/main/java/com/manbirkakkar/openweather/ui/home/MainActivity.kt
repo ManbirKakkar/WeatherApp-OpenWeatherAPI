@@ -1,11 +1,17 @@
 package com.manbirkakkar.openweather.ui.home
 
+import android.Manifest
+import android.app.Activity
+import android.content.DialogInterface
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.agnext.trackingutil.permission.TrackingUtil
 import com.manbirkakkar.openweather.R
 import com.manbirkakkar.openweather.base.BaseActivity
 import com.manbirkakkar.openweather.base.Constant
@@ -54,9 +60,9 @@ class MainActivity : BaseActivity() {
         when (item.itemId) {
             R.id.action_units -> {
 
-                if(SessionClass.getUnit(this) == Constant.UNITS_METRIC){
-                  SessionClass.setUnits(this, Constant.UNITS_IMPERIAL)
-                }else{
+                if (SessionClass.getUnit(this) == Constant.UNITS_METRIC) {
+                    SessionClass.setUnits(this, Constant.UNITS_IMPERIAL)
+                } else {
                     SessionClass.setUnits(this, Constant.UNITS_METRIC)
                 }
 
@@ -66,7 +72,7 @@ class MainActivity : BaseActivity() {
 
                 }
 
-                 loadData()
+                loadData()
             }
             else -> return super.onOptionsItemSelected(item)
         }
@@ -102,8 +108,23 @@ class MainActivity : BaseActivity() {
     }
 
     private fun loadData() {
-        viewModel.onCurrentWeather(DEFAULT_LAT, DEFAULT_LON)
-        viewModel.onWeatherForeCast(DEFAULT_LAT, DEFAULT_LON)
+
+        var lat = when(TrackingUtil(this).isLocationPermission()){
+             true->TrackingUtil(this).latitude.toDouble()
+             false->DEFAULT_LAT
+         }
+
+        var lon = when(TrackingUtil(this).isLocationPermission()){
+            true->TrackingUtil(this).longitude.toDouble()
+            false->DEFAULT_LON
+        }
+
+        getDataFromAPI(lat, lon)
+    }
+
+    private fun getDataFromAPI(lat: Double, lon: Double) {
+        viewModel.onCurrentWeather(lat, lon)
+        viewModel.onWeatherForeCast(lat, lon)
     }
 
     override fun onResume() {
@@ -117,5 +138,15 @@ class MainActivity : BaseActivity() {
         ivWeatherIcon.setIconResource(citySummaryModel.weatherIcon)
         tvWeatherInfo.text = citySummaryModel.weatherDescription
         tvTemperature.text = citySummaryModel.temperature
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        when (requestCode) {
+
+            TrackingUtil.REQUEST_LOCATION -> if (grantResults.isNotEmpty()) {
+             loadData()
+            }
+
+        }
     }
 }
