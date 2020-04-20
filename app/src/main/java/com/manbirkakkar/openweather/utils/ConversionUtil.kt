@@ -21,7 +21,7 @@ object ConversionUtil {
         try {
             val date = Date(unixTimestamp * 1000L)
             val sdf =
-                SimpleDateFormat("EEE, MMM d, HH:mm", Locale.getDefault())
+                SimpleDateFormat("EEE, MMM d, hh:mm aa", Locale.getDefault())
             sdf.timeZone = TimeZone.getDefault()
             return sdf.format(date)
         } catch (e: Exception) {

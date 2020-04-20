@@ -13,9 +13,8 @@ class Constant {
         const val DEFAULT_LAT = 30.7046
         const val DEFAULT_LON = 76.7179
 
-        val UNITS_METRIC = "metric"
-        val UNITS_IMPERIAL = "imperial"
-        val DEFAULT_UNITS = UNITS_METRIC
+        const val UNITS_METRIC = "metric"
+        const val UNITS_IMPERIAL = "imperial"
 
     }
 }

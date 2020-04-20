@@ -1,10 +1,6 @@
 package com.manbirkakkar.openweather.ui.home
 
-import android.Manifest
-import android.app.Activity
-import android.content.DialogInterface
-import android.content.pm.PackageManager
-import android.os.Build
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -149,4 +145,5 @@ class MainActivity : BaseActivity() {
 
         }
     }
+
 }

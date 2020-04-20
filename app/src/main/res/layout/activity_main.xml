@@ -39,16 +39,6 @@
 
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"
-        android:tint="@color/white"
-        android:src="@android:drawable/ic_menu_search"
-        app:layout_anchorGravity="bottom|right|end"/>
-
     <include layout="@layout/layout_progress"
         android:id="@+id/progress"
         android:visibility="gone"></include>
