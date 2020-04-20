@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "617617537834",
+    "firebase_url": "https://openweather-api.firebaseio.com",
+    "project_id": "openweather-api",
+    "storage_bucket": "openweather-api.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617617537834:android:57d9862e899fe5d4ec7c53",
+        "android_client_info": {
+          "package_name": "com.antoninovitale.fivedaysweather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617617537834-evfgmo2pfcr50eml5jmcc1j6q3f0b198.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB92kLryvFO5EsIavRQa_bVN_2YL_4uwpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617617537834-evfgmo2pfcr50eml5jmcc1j6q3f0b198.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

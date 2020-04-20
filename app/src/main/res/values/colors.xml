@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="light_bg">#f7f7f7</color>
+    <color name="trans_grey">#a04c4c50</color>
+    <color name="white">#ffffff</color>
+    <color name="light_grey">#f2f2f2</color>
+    <color name="lighter_grey">#d3d3d3</color>
+    <color name="medium_grey">#b1b1b1</color>
+    <color name="average_grey">#4c4c50</color>
+    <color name="dark_grey">#232325</color>
+    <color name="black">#000000</color>
+    <color name="golden">#c1982b</color>
+
+    <color name="trans_blue">#b65192ce</color>
+    <color name="blue">#5192ce</color>
+    <color name="dark_blue">#136eb1</color>
+    <color name="c">#cebd30</color>
+    <color name="light_orange">#f29720</color>
+    <color name="orange">#fe4c13</color>
+    <color name="red">#ff0000</color>
+    <color name="light_red">#d9534f</color>
+    <color name="green">#55b02f</color>
+    <color name="dark_green">#159b14</color>
+    <color name="trans_green">#1f55b02f</color>
+    <color name="unselectedTab">#b2d0aa</color>
+    <color name="colorGrey50">#fafafa</color>
+    <color name="background_grey">#f6f6f6</color>
+    <color name="payment_card_bg">#6a6d8c</color>
+
+
 </resources>

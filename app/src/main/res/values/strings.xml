@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">OpenWeather</string>
+    <string name="cd_weathericon">ivWeatherIcon</string>
+    <string name="google_project_api_key">AIzaSyBoWDJFbDRrWjOll6RH1VxMhY4GNzjBg9Q</string>
+    <string name="wind_speed">Wind speed: %s</string>
+    <string name="humidity">Humidity: %d%%</string>
+    <string name="max_temp">Max: %s</string>
+    <string name="min_temp">Min: %s</string>
+    <string name="change_units">Change units</string>
 </resources>
